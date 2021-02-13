@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', 'Arial', sans-serif;
+    /* display: none; */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #434343;
+    border: 1.5px solid #434343;
+    filter: drop-shadow(2px 2px 2px);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #A64D00;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F8F8F8;
+    color: black;
+    /* height: 6000px; */
+}
+
+/*=========== HEADER STYLES ===========*/
+header {
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: #2f2f2f21; */
+    z-index: 9999;
+    position: fixed;
+    border: 1px solid blue;
+    /* overflow: hidden; */
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #5f5f5f;
+}
+
+/*=========== NAV STYLES ===========*/
+.menu-btn {
+    display: none;
+}
+
+.nav {
+    list-style-type: none;
+    /* margin-left: 650px; */
+    font-size: 20px;
+    display: inline-flex;
+    border: 1px solid red;
+    margin-right: 100px;
+}
+
+.nav li {
+    padding-top: 30px;
+    /* margin-bottom: 10px; */
+    /* color: white; */
+    margin-left: 20px;
+    /* transform: scale(0.8); */
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.nav li a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    transition: all 0.3s;
+}
+
+.nav li a:hover {
+    color: #77D7FF;
+}
+
+.btn {
+    background-color: #FFF;
+    border: 2px solid white;
+    padding: 12px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    /*=========== MASTER BUTTON CLASS ===========*/
+    font-weight: 600;
+    color: black !important;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0), 0 0px 0px rgba(0, 0, 0, 0);
+    /* margin: 10px; */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #77D7FF;
+    border: 2px solid #77D7FF;
+    color: white !important;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.20), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* ==== MASTHEAD ==== */
+
+#masthead {
+    background-image: url(../img/cat1.jpg);
+    background-size: cover;
+    height: 100%;
+    border: 2px solid red;
+    padding: 20px;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    color: white;
+}
+
+#masthead .filter{
+    backdrop-filter: blur(5px) brightness(0.8);
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid red; */
+    position: absolute;
+    left:0;
+    top: 0;
+    /* background-color: #2C2C2C; */
+    z-index: 0;
+}
+
+#masthead h1, #masthead h3{
+    /* margin-top: 100px; */
+    z-index: 1;
+}
+
+.btnbox{
+    display: flex;
+    /* flex-direction: column; */
+    border: 2px solid red;
+    /* width: 60%; */
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 60px;
+    z-index: 1;
+}
+
+
+/*=========== FOOTER ===========*/
+
+footer {
+    margin-top: 40px;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: 300px;
+    background-color: #2C2C2C;
+    padding-top: 30px;
+    display: none;
+}
+
+
+
+
+/* --------- IN BETWEEN TABLET AND DESKTOP ISSUES FIX HERE0 --------- */
+@media screen and (max-width: 1260px) {}
+
+
+
+
+
+
+
+/* ===== TABLET RESOLUTION =====*/
+@media screen and (max-width: 768px) {}
+
+
+/* ===== MOBILE RESOLUTION =====*/
+@media screen and (max-width: 490px) {
+
+    header {
+        display: flex;
+        /* align-items: center; */
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 3em;
+        border: 2px solid green;
+        margin-right: 10px;
+        margin-top: 24px;
+        color: white;
+    }
+
+    .nav {
+        margin-right: 0px;
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #5f5f5f;
+        /* justify-content: center; */
+        /* display: none; */
+        transition: all 0.3s;
+        right: -100%;
+        border: 2px solid brown;
+        z-index: 99;
+    }
+
+    .nav li {
+        /* border: 2px solid brown; */
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    .nav li a {
+        padding: 10px 30px;
+        /* border: 2px solid grey; */
+    }
+
+    /* ANIMATIONS STUFF */
+
+    @keyframes FadeIn {
+        from {
+            opacity: 0.3;
+        }
+
+        to {
+            opacity: 1;
+            margin-top: 0px;
+        }
+    }
+
+    @keyframes Slide1 {
+        from {
+            opacity: 0.3;
+            margin-left: -100px;
+        }
+
+        to {
+            opacity: 1;
+            margin-left: 0px;
+        }
+    }
+
+    @keyframes arrowAnim {
+        from {
+            bottom: 5px;
+        }
+
+        to {
+            bottom: 20px;
+        }
+    }
+}
